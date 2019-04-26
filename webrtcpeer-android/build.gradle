@@ -25,7 +25,7 @@ android {
 
 dependencies {
     // compile fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13-beta-2'
     implementation('fi.vtt.nubomedia:utilities-android:1.0.2@aar') { transitive=true }
     implementation('io.pristine:libjingle:11139@aar') { transitive=true }
 }
