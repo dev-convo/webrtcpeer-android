@@ -1,8 +1,8 @@
 buildscript {
     repositories {
-        maven { url 'https://mvnrepository.com/artifact/io.pristine/libjingle' }
         jcenter { url "http://jcenter.bintray.com/" }
         maven { url 'http://repo1.maven.org/maven2' }
+        maven { url 'http://central.maven.org/maven2/' }
         maven { url "https://jitpack.io" }
         jcenter()
         google()
@@ -18,8 +18,8 @@ allprojects {
     repositories {
         jcenter { url "http://jcenter.bintray.com/" }
         maven { url 'http://repo1.maven.org/maven2' }
+        maven { url 'http://central.maven.org/maven2/' }
         maven { url "https://jitpack.io" }
-        maven { url 'https://mvnrepository.com/artifact/io.pristine/libjingle' }
         jcenter()
         google()
     }
