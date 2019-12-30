@@ -18,6 +18,8 @@
 package fi.vtt.nubomedia.webrtcpeerandroid;
 
 import android.util.Log;
+
+import org.webrtc.AudioSource;
 import org.webrtc.CameraEnumerationAndroid;
 import org.webrtc.DataChannel;
 import org.webrtc.IceCandidate;
@@ -243,6 +245,18 @@ final class MediaResourceManager implements NBMWebRTCPeer.Observer {
         localVideoTrack.setEnabled(renderLocalVideo);
         localVideoTrack.addRenderer(new VideoRenderer(localRender));
         return localVideoTrack;
+    }
+
+    public void setLocalAudioEnabled(final boolean enable) {
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                renderLocalVideo = enable;
+                if (localVideoTrack != null) {
+                    localVideoTrack.setEnabled(renderLocalVideo);
+                }
+            }
+        });
     }
 
     private class AttachRendererTask implements Runnable {

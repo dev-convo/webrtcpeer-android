@@ -635,7 +635,7 @@ public class NBMWebRTCPeer{
      */
     @SuppressWarnings("unused")
     public void enableAudio(boolean enable){
-
+        mediaResourceManager.setLocalAudioEnabled(enable);
     }
 
     /**
