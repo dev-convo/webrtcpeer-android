@@ -528,7 +528,7 @@ public class NBMWebRTCPeer{
     }
 
     private boolean startLocalMediaSync() {
-        if (mediaResourceManager != null && mediaResourceManager.getLocalMediaStream() == null) {
+        if (mediaResourceManager != null && mediaResourceManager.getLocalMediaStream() == null && mediaResourceManager.getLocalVideoEnabled()) {
             mediaResourceManager.createLocalMediaStream(VideoRendererGui.getEglBaseContext(), localRender);
             mediaResourceManager.startVideoSource();
             mediaResourceManager.selectCameraPosition(config.getCameraPosition());
